@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     l = []
     for i in range(100000):
-        l.append( str(i) )
+        l.append( str(i*i) )
     l.sort()
     print(l[0])
 
