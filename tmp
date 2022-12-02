@@ -1,0 +1,38 @@
+HAHA import argparse
+HAHA 
+HAHA def parse_args():
+HAHA parser = argparse.ArgumentParser(description="This script does nothing fancy",
+HAHA formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+HAHA 
+HAHA parser.add_argument("in_file", type=str, help="Input filename")
+HAHA parser.add_argument("out_file", type=str, help="Output filename")
+HAHA return parser.parse_args()
+HAHA 
+HAHA if __name__ == '__main__':
+HAHA x = 0
+HAHA for i in range(10000):
+HAHA for j in range(1000):
+HAHA x += i
+HAHA print(x)
+HAHA 
+HAHA args = parse_args()
+HAHA in_file = args.in_file
+HAHA out_file = args.out_file
+HAHA 
+HAHA f = open(in_file, 'r')
+HAHA lines = f.readlines()
+HAHA f.close()
+HAHA 
+HAHA f = open(out_file, 'w')
+HAHA for line in lines:
+HAHA line = line.strip()
+HAHA f.write('HAHA ' + line + '\n')
+HAHA f.close()
+HAHA 
+HAHA l = []
+HAHA for i in range(100000):
+HAHA l.append( str(i) )
+HAHA l.sort()
+HAHA print(l[0])
+HAHA 
+HAHA print('DONE!')
