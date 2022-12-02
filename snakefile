@@ -8,4 +8,5 @@ rule run_main:
     benchmark:
         str + "benchmark"
     shell:
-        "python main.py {input[0]} {output}"
+        for i in range(2):
+            "python main.py {input[0]} {output}"
