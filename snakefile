@@ -1,3 +1,4 @@
+str = 'test'
 rule run_main:
     input:
         "main.py",
@@ -5,6 +6,6 @@ rule run_main:
     output:
         "tmp"
     benchmark:
-        "test_benchmark"
+        str + "benchmark"
     shell:
         "python main.py {input[0]} {output}"
